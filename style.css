@@ -1,0 +1,482 @@
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  font-family: 'Noto Serif Malayalam', system-ui, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  height: 60vh;
+  background: url("gallery/church.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.gallery-page .hero {
+  background: url("gallery/holy.jpg") center/cover no-repeat;
+}
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  padding: 1rem;
+}
+
+.animate-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1.5s forwards 0.5s;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ================= ANNOUNCEMENT BANNER ================= */
+.announcement {
+ background:#2c5f8a;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.6rem 0;
+  font-weight: 600;
+}
+
+.announcement-track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 18s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Mobile speed adjustment */
+@media (max-width: 768px) {
+  .announcement-track {
+    animation-duration: 22s;
+  }
+}
+
+/* ================= LANGUAGE SWITCH ================= */
+.lang-switch {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+.lang-switch button {
+  background: #fff;
+  border: none;
+  padding: 6px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* ================= NAV ================= */
+.nav {
+  background: #17405f;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background: #2c5f8a;
+}
+
+/* ================= MAIN ================= */
+.section {
+  padding: 2rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  color: #2c5f8a;
+  margin-top: 2rem;
+}
+
+/* ================= BIBLE VERSE CARD ================= */
+.verse-card {
+  background: #fff;
+  border-left: 5px solid #2c5f8a;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* ================= SERVICE BOXES ================= */
+.service-boxes, .event-boxes, .testimonial-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.service-card, .event-card, .testimonial-card {
+  background: #c5fad3;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.service-card h3, .event-card h3 {
+  color: #17405f;
+}
+
+.pastor-card {
+  background: #88f2a4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.pastor-card span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ================= GALLERY ================= */
+.gallery-intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.gallery-section {
+  margin-bottom: 3rem;
+}
+
+.gallery-section h2 {
+  margin-bottom: 1rem;
+  color: #2c5f8a;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.gallery-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ================= FADE-IN ================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .gallery-grid img {
+    height: 180px;
+  }
+}
+
+/* ================= VICAR MESSAGE ================= */
+.vicar-section {
+  background: #f9fafc;
+  padding: 3rem 1rem;
+}
+
+.vicar-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Round Image */
+.vicar-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #2c5f8a;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Text */
+.vicar-message h2 {
+  margin-bottom: 0.5rem;
+  color: #2c5f8a;
+}
+
+.vicar-message p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.vicar-name {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.vicar-name span {
+  font-weight: normal;
+  color: #666;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .vicar-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vicar-image img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ================= CALL TO ACTION BUTTON ================= */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #2c5f8a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #17405f;
+}
+/* ================= SERVICES PAGE ================= */
+
+/* Common container for services page */
+.services-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Align intro with other sections */
+.services-intro {
+  margin-bottom: 3rem;
+  text-align: left; /* KEY FIX */
+}
+
+.services-intro h2 {
+  color: #2c5f8a;
+  margin-bottom: 0.6rem;
+}
+
+.services-intro p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* Service Blocks */
+.service-block {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.service-block h3 {
+  margin-bottom: 1rem;
+  color: #2c5f8a;
+}
+
+/* Mass Schedule Cards */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h4 {
+  margin-bottom: 0.6rem;
+  color: #333;
+}
+
+.service-card.highlight {
+  background: #2c5f8a;
+  color: #fff;
+}
+
+/* Lists */
+.service-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.service-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* ====== Inner container for alignment ====== */
+.service-inner {
+  max-width: 1000px;   /* Matches other sections */
+  margin: 0 auto;      /* Centers container horizontally */
+  padding: 0;          /* Remove extra padding from inner container */
+  text-align: left;    /* Align heading and content with other sections */
+}
+
+/* Optional: keep visual separation */
+.light-bg {
+  background: #f7f9fc;
+  padding: 2rem 0;    /* Only top & bottom padding */
+}
+
+
+
+/* Light background section */
+.light-bg {
+  background: #f7f9fc;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 1.2rem;
+  }
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #17405f;        /* Church-themed dark blue */
+  color: #fff;                /* White text for contrast */
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: 'Noto Serif Malayalam', serif;
+  border-top: 3px solid #2c5f8a; /* subtle top border for separation */
+}
+
+.footer p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.footer .social-icons {
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  color: #fff;
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.3s, color 0.3s;
+  font-size: 1rem;
+}
+
+.footer .social-icons a:hover {
+  color: #ffd700; /* gold highlight */
+  transform: translateY(-3px);
+}
+
+/* Responsive footer for tablets and phones */
+@media (max-width: 768px) {
+  .footer p {
+    font-size: 0.85rem;
+  }
+
+  .footer .social-icons a {
+    margin: 0 6px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ================= FADE-IN ANIMATION ================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= MOBILE HERO IMAGE ================= */
+@media (max-width: 768px) {
+  .hero {
+    background: url("church-mobile.jpg") center/cover no-repeat;
+    height: 50vh;
+  }
+  .hero-content h1 { font-size: 1.8rem; }
+  .hero-content p { font-size: 1rem; }
+}

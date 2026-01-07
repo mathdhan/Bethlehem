@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Holy Family Church Bethlehem</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="gallery-page">
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content animate-text">
+    <h1>Parish Gallery</h1>
+    <p>Moments of Faith, Worship, and Fellowship</p>
+  </div>
+</header>
+
+<!-- ================= NAVIGATION ================= -->
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="section">
+
+  <!-- INTRO -->
+  <p class="gallery-intro">
+    The gallery of Holy Family Church Bethlehem reflects the spiritual, cultural,
+    and community life of our parish. These moments capture worship, celebrations,
+    and fellowship shared by our parish family.
+  </p>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery-section">
+    <h2>Church & Altar</h2>
+    <div class="gallery-grid">
+      <img src="gallery/church1.jpg" alt="Church exterior" class="fade-in">
+      <img src="gallery/church2.jpg" alt="Church interior" class="fade-in">
+      <img src="gallery/altar.jpg" alt="Altar" class="fade-in">
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Holy Mass & Liturgical Celebrations</h2>
+    <div class="gallery-grid">
+      <img src="gallery/mass1.jpg" alt="Holy Mass" class="fade-in">
+      <img src="gallery/mass2.jpg" alt="Sunday Mass" class="fade-in">
+      <img src="gallery/mass3.jpeg" alt="Liturgical celebration" class="fade-in">
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Feast Days & Major Celebrations</h2>
+    <div class="gallery-grid">
+      <img src="gallery/feast1.jpg" alt="Parish Feast" class="fade-in">
+      <img src="gallery/christmas.jpg" alt="Christmas Celebration" class="fade-in">
+      <img src="gallery/easter.avif" alt="Easter Celebration" class="fade-in">
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Sacramental Life</h2>
+    <div class="gallery-grid">
+      <img src="gallery/baptism.jpg" alt="Baptism" class="fade-in">
+      <img src="gallery/communion.jpg" alt="First Holy Communion" class="fade-in">
+      <img src="gallery/confirmation.jpg" alt="Confirmation" class="fade-in">
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Youth & Children Activities</h2>
+    <div class="gallery-grid">
+      <img src="gallery/youth1.jpg" alt="Youth activity" class="fade-in">
+      <img src="gallery/catechism.jpg" alt="Catechism class" class="fade-in">
+      <img src="gallery/choir.jpeg" alt="Choir" class="fade-in">
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>മാതൃവേദി</h2>
+    <div class="gallery-grid">
+      <img src="gallery/youth1.jpg" alt="Youth activity" class="fade-in">
+      <img src="gallery/catechism.jpg" alt="Catechism class" class="fade-in">
+      <img src="gallery/choir.jpeg" alt="Choir" class="fade-in">
+      <img src="gallery/choir.jpeg" alt="Choir" class="fade-in">
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>പിതൃവേദി</h2>
+    <div class="gallery-grid">
+      <img src="gallery/youth1.jpg" alt="Youth activity" class="fade-in">
+      <img src="gallery/catechism.jpg" alt="Catechism class" class="fade-in">
+      <img src="gallery/choir.jpeg" alt="Choir" class="fade-in">
+      <img src="gallery/choir.jpeg" alt="Choir" class="fade-in">
+    </div>
+  </section>
+  <section class="gallery-section">
+    <h2>Sunday School Teachers</h2>
+    <div class="gallery-grid">
+      <img src="gallery/youth1.jpg" alt="Youth activity" class="fade-in">
+      <img src="gallery/catechism.jpg" alt="Catechism class" class="fade-in">
+      <img src="gallery/choir.jpeg" alt="Choir" class="fade-in">
+      <img src="gallery/choir.jpeg" alt="Choir" class="fade-in">
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2026 Holy Family Church Bethlehem | Kerala, India</p>
+    <p>Contact: +91 12345 67890 | info@holyfamilybethlehem.org</p>
+    <div class="social-icons">
+      <a href="#">Fb</a>
+      <a href="#">Ig</a>
+      <a href="#">YT</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= FADE-IN ON SCROLL ================= -->
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
