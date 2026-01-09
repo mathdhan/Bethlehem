@@ -41,7 +41,7 @@ body {
   font-size: 1rem;
   letter-spacing: 0.5px;
   opacity: 0.9;
-  color: #fac039;
+  color: #f7fa64;
 }
 
 /* Right-aligned "Since 1902" */
@@ -53,7 +53,7 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
   opacity: 0.85;
-color: #fff;
+color: #f02228;
 }
 
 /* Mobile adjustment */
@@ -64,6 +64,7 @@ color: #fff;
     font-size: 0.8rem;
   }
 }
+
 
 .gallery-page .hero {
   background: url("gallery/holy.jpg") center/cover no-repeat;
@@ -95,8 +96,9 @@ color: #fff;
   }
 }
 
+
 .about-page .hero {
-  background: url("gallery/church.jpg") center/cover no-repeat;
+  background: url("gallery/about.jpg") center/cover no-repeat;
 }
 
 
@@ -124,7 +126,6 @@ color: #fff;
     transform: translateY(0);
   }
 }
-
 
 
 /* ================= ANNOUNCEMENT BANNER ================= */
@@ -158,16 +159,6 @@ color: #fff;
     animation-duration: 22s;
   }
 }
-
-.service-card h4 {
-  margin-bottom: 0.4rem;
-  color: #2c5f8a;
-}
-
-.service-card p {
-  font-size: 0.95rem;
-}
-
 
 /* ================= LANGUAGE SWITCH ================= */
 .lang-switch {
@@ -236,7 +227,7 @@ h2 {
 }
 
 .service-card, .event-card, .testimonial-card {
-  background: #fff;
+  background: #f3d5f5;
   padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
@@ -295,7 +286,7 @@ h2 {
 
 .gallery-grid img {
   width: 100%;
-  height: 220px;
+  height: 350px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -537,6 +528,17 @@ h2 {
   }
 }
 
+.service-card h4 {
+  margin-bottom: 0.4rem;
+  color: #2c5f8a;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+}
+
+
+
 /* ================= CALL TO ACTION BUTTON ================= */
 .btn {
   display: inline-block;
@@ -674,9 +676,6 @@ h2 {
   font-size: 0.95rem;
   line-height: 1.5;
 }
-.footer a {
-  color: #ffffff;
-}
 
 .footer .social-icons {
   margin-top: 10px;
@@ -734,9 +733,90 @@ h2 {
   .hero-content p { font-size: 1rem; }
 }
 
+/* ================= GALLERY ================= */
 
+.gallery-section {
+  margin-top: 3rem;
+}
 
+.gallery-section h2 {
+  margin-bottom: 1rem;
+  color: #2c5f8a;
+}
 
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
 
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
 
+.gallery-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ================= LIGHTBOX ================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .gallery-grid img {
+    height: 180px;
+  }
+
+  .gallery-section {
+    margin-top: 2.2rem;
+  }
+}
 
