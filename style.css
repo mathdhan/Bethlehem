@@ -94,6 +94,39 @@ color: #f02228;
     transform: translateY(0);
   }
 }
+
+.about-page .hero {
+  background: url("gallery/about.jpg") center/cover no-repeat;
+}
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  padding: 1rem;
+}
+
+.animate-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1.5s forwards 0.5s;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
 /* ================= ANNOUNCEMENT BANNER ================= */
 .announcement {
  background:#2c5f8a;
@@ -687,5 +720,6 @@ h2 {
   .hero-content h1 { font-size: 1.8rem; }
   .hero-content p { font-size: 1rem; }
 }
+
 
 
