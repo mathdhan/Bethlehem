@@ -227,7 +227,7 @@ h2 {
 }
 
 .service-card, .event-card, .testimonial-card {
-  background: #f3d5f5;
+  background: #fff;
   padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
@@ -819,6 +819,7 @@ h2 {
     margin-top: 2.2rem;
   }
 }
+
 
 
 
