@@ -159,6 +159,16 @@ color: #fff;
   }
 }
 
+.service-card h4 {
+  margin-bottom: 0.4rem;
+  color: #2c5f8a;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+}
+
+
 /* ================= LANGUAGE SWITCH ================= */
 .lang-switch {
   position: absolute;
@@ -723,6 +733,7 @@ h2 {
   .hero-content h1 { font-size: 1.8rem; }
   .hero-content p { font-size: 1rem; }
 }
+
 
 
 
