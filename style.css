@@ -98,7 +98,7 @@ color: #f02228;
 
 
 .about-page .hero {
-  background: url("gallery/about.jpg") center/cover no-repeat;
+  background: url("gallery/church.jpg") center/cover no-repeat;
 }
 
 
@@ -819,4 +819,5 @@ h2 {
     margin-top: 2.2rem;
   }
 }
+
 
