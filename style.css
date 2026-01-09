@@ -96,7 +96,7 @@ color: #f02228;
 }
 
 .about-page .hero {
-  background: url("gallery/about.jpg") center/cover no-repeat;
+  background: url("gallery/church.jpg") center/cover no-repeat;
 }
 
 
@@ -720,6 +720,7 @@ h2 {
   .hero-content h1 { font-size: 1.8rem; }
   .hero-content p { font-size: 1rem; }
 }
+
 
 
 
