@@ -43,8 +43,8 @@
   <section class="gallery-section">
     <h2>Church & Altar</h2>
     <div class="gallery-grid">
-      <img src="gallery/church.jpg" alt="Church exterior" class="fade-in">
-      <img src="gallery/about.jpg" alt="Church interior" class="fade-in">
+      <img src="gallery/church1.jpg" alt="Church exterior" class="fade-in">
+      <img src="gallery/church2.jpg" alt="Church interior" class="fade-in">
       <img src="gallery/altar.jpg" alt="Altar" class="fade-in">
     </div>
   </section>
@@ -128,7 +128,11 @@
     </div>
   </div>
 </footer>
-
+<!-- ================= LIGHTBOX ================= -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="Expanded view">
+</div>
 <!-- ================= FADE-IN ON SCROLL ================= -->
 <script>
   const faders = document.querySelectorAll('.fade-in');
@@ -144,6 +148,30 @@
   faders.forEach(el => observer.observe(el));
 </script>
 
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.querySelector('.lightbox-img');
+  const closeBtn = document.querySelector('.lightbox-close');
+
+  document.querySelectorAll('.gallery-grid img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.classList.add('active');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+
+  lightbox.addEventListener('click', e => {
+    if (e.target !== lightboxImg) {
+      lightbox.classList.remove('active');
+    }
+  });
+</script>
+
+
 </body>
 </html>
-
