@@ -127,6 +127,9 @@ color: #fff;
   }
 }
 
+.footer a {
+  color: #ffffff;
+}
 
 /* ================= ANNOUNCEMENT BANNER ================= */
 .announcement {
@@ -819,6 +822,7 @@ h2 {
     margin-top: 2.2rem;
   }
 }
+
 
 
 
