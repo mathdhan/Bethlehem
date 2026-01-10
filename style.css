@@ -865,6 +865,39 @@ h2 {
     height: 130px;
   }
 }
+/* Info Sections (Office Hours & Boundaries) */
+.info-section {
+  margin-top: 50px;
+}
+
+.info-card {
+  background: #f8f9fb;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  max-width: 900px;
+}
+
+.info-card p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.boundary-list {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.boundary-list li {
+  margin-bottom: 8px;
+}
+
+.note {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-top: 15px;
+}
+
 
 
 
