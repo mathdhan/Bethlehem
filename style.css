@@ -96,6 +96,35 @@ color: #fff;
   }
 }
 
+.contact-page .hero {
+  background: url("gallery/contact.png") center/cover no-repeat;
+}
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  padding: 1rem;
+}
+
+.animate-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1.5s forwards 0.5s;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .about-page .hero {
   background: url("gallery/church.jpg") center/cover no-repeat;
@@ -897,6 +926,7 @@ h2 {
   opacity: 0.85;
   margin-top: 15px;
 }
+
 
 
 
